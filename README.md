@@ -19,7 +19,7 @@ Once in a virtual environment, you can run these commands to download the reposi
 
 ## Instructions
 
-This module was designed for students without programming experience so an in-depth beginner's guide is available as a [pdf](https://drive.google.com/file/d/1klmqJFyxAPQZ_7WkVIpYJU1wy7ZAXSwh/view?usp=sharing).
+This module was designed for students without programming experience so an in-depth beginner's guide is available as a [pdf](https://drive.google.com/file/d/1mfNe7fA740PfIYRPVO7L4lQCO6P_x_M0/view?usp=sharing).
 
 ## How it works
 
