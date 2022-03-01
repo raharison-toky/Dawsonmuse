@@ -77,7 +77,7 @@ def generate_save_fn(
 ) -> Path:
     """Generates a file name with the proper trial number for the current subject/experiment combo"""
     recording_dir = get_recording_dir(
-        board_name, experiment, subject_id, session_nb, data_dir=DATA_DIR
+        board_name, experiment, subject_id, session_nb, data_dir=data_dir
     )
 
     # generate filename based on recording date-and-timestamp and then append to recording_dir
@@ -95,11 +95,16 @@ Date: December 26, 2021
 
 class muserecorder(Process):
 
+    """
+    This is a child class of Process that allows a variable recording time. It takes in the path where the EEG data will be saved and a timout in case the marker stream is not found.
+    """
+
     def __init__(self,save_fn,markers_timout=120):
         multiprocessing.Process.__init__(self)
         self.exit = multiprocessing.Event()
         self.filename = save_fn
         self.markers_timout = markers_timout
+
     def run(self):
         filename= self.filename,
         dejitter=False,
@@ -220,6 +225,9 @@ class muserecorder(Process):
         )
 
         print("Done - wrote file: {}".format(filename))
+    
+    def end_recording(self):
+        self.exit.set()
 
 class markers_stream:
 
