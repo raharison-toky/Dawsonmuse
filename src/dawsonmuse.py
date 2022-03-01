@@ -104,7 +104,6 @@ class muserecorder(Process):
         self.exit = multiprocessing.Event()
         self.filename = save_fn
         self.markers_timout = markers_timout
-
     def run(self):
         filename= self.filename,
         dejitter=False,
