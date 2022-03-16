@@ -142,7 +142,7 @@ class muserecorder(Process):
             print(marker_streams[0].name())
         else:
             inlet_marker = False
-            raise("Can't find Markers stream.")
+            raise Exception("Can't find Markers stream.")
 
         info = inlet.info()
         description = info.desc()
