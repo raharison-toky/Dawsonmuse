@@ -170,7 +170,6 @@ dependencies:
     - hsluv==5.0.2
     - idna==3.3
     - mne==0.23.0
-    - muselsl==2.1.0
     - psychtoolbox==3.0.16
     - pycparser==2.21
     - pygame==2.0.1
@@ -192,5 +191,4 @@ dependencies:
     - soundfile==0.10.3.post1
     - tobii-research==1.8.0
     - urllib3==1.26.7
-    - vispy==0.9.6
     - websocket-client==1.1.0

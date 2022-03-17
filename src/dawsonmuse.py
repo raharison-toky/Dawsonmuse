@@ -13,7 +13,6 @@ from pathlib import Path
 from sklearn.linear_model import LinearRegression
 from time import time, strftime, gmtime
 from time import strftime, gmtime
-from muselsl.constants import LSL_SCAN_TIMEOUT, LSL_EEG_CHUNK, LSL_PPG_CHUNK, LSL_ACC_CHUNK, LSL_GYRO_CHUNK
 from pathlib import Path
 import matplotlib.pyplot as plt
 import mne
@@ -29,7 +28,11 @@ Date: December 26, 2021
 logger = logging.getLogger(__name__)
 
 DATA_DIR = os.path.dirname(os.path.realpath(__file__))
-
+LSL_SCAN_TIMEOUT = 5
+LSL_EEG_CHUNK = 12
+LSL_PPG_CHUNK = 6
+LSL_ACC_CHUNK = 1
+LSL_GYRO_CHUNK = 1
 
 def get_recording_dir(
     board_name: str,
