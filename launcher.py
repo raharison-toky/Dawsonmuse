@@ -6,7 +6,6 @@ import time
 def run_exp():
     import Experiment
 
-
 if __name__ == "__main__":
 
     os.system(r"start bluemuse://start?streamfirst=true")
