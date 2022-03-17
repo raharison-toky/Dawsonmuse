@@ -4,7 +4,7 @@ import os
 import time
 
 def run_exp():
-    import stroop
+    import Experiment
 
 
 if __name__ == "__main__":
